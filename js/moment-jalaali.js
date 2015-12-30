@@ -481,35 +481,35 @@ function getPrototypeOf(object) {
     Languages
 ************************************/
 extend(getPrototypeOf(moment.localeData()),
-  { _jMonths: [ 'Farvardin'
-              , 'Ordibehesht'
-              , 'Khordaad'
-              , 'Tir'
-              , 'Amordaad'
-              , 'Shahrivar'
-              , 'Mehr'
-              , 'Aabaan'
-              , 'Aazar'
-              , 'Dey'
-              , 'Bahman'
-              , 'Esfand'
+  { _jMonths: [ 'فروردین'
+              , 'اردیبهشت'
+              , 'خرداد'
+              , 'تیر'
+              , 'مرداد'
+              , 'شهریور'
+              , 'مهر'
+              , 'آبان'
+              , 'آذر'
+              , 'دی'
+              , 'بهمن'
+              , 'اسفند'
               ]
   , jMonths: function (m) {
       return this._jMonths[m.jMonth()]
     }
 
-  , _jMonthsShort:  [ 'Far'
-                    , 'Ord'
-                    , 'Kho'
-                    , 'Tir'
-                    , 'Amo'
-                    , 'Sha'
-                    , 'Meh'
-                    , 'Aab'
-                    , 'Aaz'
-                    , 'Dey'
-                    , 'Bah'
-                    , 'Esf'
+  , _jMonthsShort:  [ 'وفر'
+                    , 'ارد'
+                    , 'خر'
+                    , 'تیر'
+                    , 'مر'
+                    , 'شهر'
+                    , 'مهر'
+                    , 'آبا'
+                    , 'آذر'
+                    , 'دی'
+                    , 'بهم'
+                    , 'اسف'
                     ]
   , jMonthsShort: function (m) {
       return this._jMonthsShort[m.jMonth()]
@@ -690,7 +690,7 @@ function dateFromArray(config) {
 
 function makeDateFromStringAndFormat(config) {
   var tokens = config._f.match(formattingTokens)
-    , string = config._i + ''
+    , string = config._i
     , len = tokens.length
     , i
     , token
@@ -745,7 +745,7 @@ function makeDateFromStringAndArray(config, utc) {
 }
 
 function removeParsedTokens(config) {
-  var string = config._i + ''
+  var string = config._i
     , input = ''
     , format = ''
     , array = config._f.match(formattingTokens)
@@ -1004,14 +1004,6 @@ jMoment.fn.startOf = function (units) {
   } else {
     return moment.fn.startOf.call(this, units)
   }
-}
-
-jMoment.fn.endOf = function (units) {
-  units = normalizeUnits(units)
-  if (units === undefined || units === 'milisecond') {
-    return this
-  }
-  return this.startOf(units).add(1, (units === 'isoweek' ? 'week' : units)).subtract(1, 'ms')
 }
 
 jMoment.fn.clone = function () {

@@ -20,7 +20,7 @@
 
 document.addEventListener("backbutton",amintest, false);
 function amintest(){
-   /* 
+
     var loc =   window.location.hash;
     loc = loc.replace("#/", "");
     
@@ -31,29 +31,26 @@ function amintest(){
 		$.fancybox.close();
 		return false;
 	}
-    if(loc == "menu" )
+    if(loc == "wall" || loc == "select")
     {
-       //navigator.app.exitApp();
+       navigator.app.exitApp();
         return false;
     }
-    else if(loc == "map")
+    else if(loc == "forget_pass" || loc == "register_one" || loc == "register_two" || loc == "register_three" || loc == "myprofile" || loc == "mycv" || 
+           loc == "edit_info" || loc == "follower" || loc == "following" || loc == "search_result" || loc == "mycv" ||  loc == "msg" || loc == "msg_detail"   )
     {
-         window.location.hash = "#/location";
+         window.history.back() ;
     }
-    else if(loc == "product_detail")
+    else if(loc == "login")
     {
-         window.location.hash = "#/product";
-    }
-    else if(loc == "")
-    {
-        navigator.app.exitApp();
+         window.location.hash = "#/select";
     }
     else
     {
-	    window.location.hash = "#/menu";
+	    window.location.hash = "#/wall";
     }
     return false;
-    */
+
 }
 $(document).ready(function(){
     height();

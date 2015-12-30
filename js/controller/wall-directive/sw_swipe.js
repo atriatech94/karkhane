@@ -30,7 +30,11 @@ angular.module('myapp')
                         $('.scroller_asmin').attr("style","transform : translate3d(-"+rsw+"px , 0px, 0px) !important ;-webkit-transform : translate3d(-"+rsw+"px , 0px, 0px) !important ;");
                     });
                     height();
-                    /*===============================================================================*/   
+                    /*===============================================================================*/
+                    get_count_mail();
+                    function get_count_mail(){$.get(base_url+"/api_chat/count_new_msg/ChetGet-098ConTTHYT65VC-C276/"+localStorage.getItem("user_id"),function(data){var count = JSON.parse(data);if(count[0].count > 0){$(".msg i").show().text(count[0].count);}}); }    
+                    /*===============================================================================*/
+                    setInterval(function(){get_count_mail();},50000)
                 });	
             },
         	templateUrl :  "pages/wall/sw_swipe.html"
@@ -137,9 +141,10 @@ function show_user($rootScope,$http,scope,dir){
             $(dir).hide();
             $('.swiper-scrollbar').show();
         });
+       
         /*===============================================================================*/  
         $("."+dir).on("click",".circle_btn_like",function(){
-
+           
            var my_id = localStorage.getItem("user_id");
            var your_id= $(this).attr("user_id");
 
@@ -160,6 +165,7 @@ function show_user($rootScope,$http,scope,dir){
             }
         });
         /*===============================================================================*/ 
+        console.log(dir);
         $("."+dir).on("click",".circle_btn_view",function(){
             var my_id = localStorage.getItem("user_id");
             var your_id= $(this).attr("user_id");

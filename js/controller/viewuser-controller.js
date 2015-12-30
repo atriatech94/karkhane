@@ -26,12 +26,12 @@ angular.module('myapp')
                         if(element.picname == "")
                         {
                             if(element.gender == "0")
-                                result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                             if(element.gender == "1")
-                                result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                         }
                         else
-                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                         result +='<div class="user_one_info">';
                         result +='<h3>'+element.name+'</h3>';
                         result +='<h5>'+element.field+'</h5>';
@@ -72,12 +72,12 @@ angular.module('myapp')
                                 if(element.picname == "")
                                 {
                                     if(element.gender == "0")
-                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                                     if(element.gender == "1")
-                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                                 }
                                 else
-                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                                   result +='<div class="user_one_info">';
                                   result +='<h3>'+element.name+'</h3>';
                                   result +='<h5>'+element.field+'</h5>';
@@ -147,12 +147,12 @@ angular.module('myapp')
                         if(element.picname == "")
                         {
                             if(element.gender == "0")
-                                result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                             if(element.gender == "1")
-                                result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                         }
                         else
-                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                         result +='<div class="user_one_info">';
                         result +='<h3>'+element.name+'</h3>';
                         result +='<h5>'+element.field+'</h5>';
@@ -193,12 +193,12 @@ angular.module('myapp')
                                 if(element.picname == "")
                                 {
                                     if(element.gender == "0")
-                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                                     if(element.gender == "1")
-                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                                 }
                                 else
-                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                                   result +='<div class="user_one_info">';
                                   result +='<h3>'+element.name+'</h3>';
                                   result +='<h5>'+element.field+'</h5>';
@@ -264,12 +264,12 @@ angular.module('myapp')
                         if(element.picname == "")
                         {
                             if(element.gender == "0")
-                                result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                             if(element.gender == "1")
-                                result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                         }
                         else
-                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                         result +='<div class="user_one_info">';
                         result +='<h3>'+element.name+'</h3>';
                         result +='<h5>'+element.field+'</h5>';
@@ -310,12 +310,12 @@ angular.module('myapp')
                                 if(element.picname == "")
                                 {
                                     if(element.gender == "0")
-                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                                     if(element.gender == "1")
-                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                    result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                                 }
                                 else
-                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                                   result +='<div class="user_one_info">';
                                   result +='<h3>'+element.name+'</h3>';
                                   result +='<h5>'+element.field+'</h5>';

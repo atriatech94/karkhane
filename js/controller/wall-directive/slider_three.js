@@ -19,12 +19,12 @@ angular.module('myapp')
                          if(element.picname == "")
                          {
                              if(element.gender == "0")
-                                 result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';
+                                 result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';
                              if(element.gender == "1")
-                                 result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';
+                                 result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';
                         }
                         else
-                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                        { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                         result +='<div class="user_one_info">';
                         result +='<h3>'+element.name+'</h3>';
                         result +='<h5>'+element.field+'</h5>';
@@ -32,9 +32,9 @@ angular.module('myapp')
                         result +='<span>'+element.state+'، '+element.city+' </span>';
                         result +='</div>';
                         result +='<div class="user_one_options">';
-                        result +='<span class="user_cm">25</span>';
+                        result +='<span class="user_cm">'+element.msg+'</span>';
                         result +='<span class="user_like">'+element.followers+'</span>';
-                        result +='<span class="user_view">789</span>';
+                        result +='<span class="user_view">'+element.view+'</span>';
                         result +='</div>';
                         result +='<div class="clear"></div>';
                         result +='</div>';
@@ -66,11 +66,11 @@ angular.module('myapp')
                               var result ='<div class="user_one" user_id="'+element.member_id+'" scope="posthasjob" >';
                                 if(element.picname == "")
                                 {
-                                    if(element.gender == "0"){ result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"><span></div>';}
-                                    else if(element.gender == "1"){result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"><span></div>';}
+                                    if(element.gender == "0"){ result += '<div class="user_one_image"><span style="background-image:url(img/user_men.jpg)"></span></div>';}
+                                    else if(element.gender == "1"){result += '<div class="user_one_image"><span style="background-image:url(img/user_women.jpg)"></span></div>';}
                                 }
                                 else
-                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"><span></div>'; }
+                                { result += '<div class="user_one_image"><span style="background-image:url('+base_url+'uploads/user_img/'+element.picname+');"></span></div>'; }
                                   result +='<div class="user_one_info">';
                                   result +='<h3>'+element.name+'</h3>';
                                   result +='<h5>'+element.field+'</h5>';
@@ -78,9 +78,9 @@ angular.module('myapp')
                                   result +='<span>'+element.state+'، '+element.city+' </span>';
                                   result +='</div>';
                                   result +='<div class="user_one_options">';
-                                  result +='<span class="user_cm">25</span>';
+                                  result +='<span class="user_cm">'+element.msg+'</span>';
                                   result +='<span class="user_like">'+element.followers+'</span>';
-                                  result +='<span class="user_view">789</span>';
+                                  result +='<span class="user_view">'+element.view+'</span>';
                                   result +='</div>';
                                   result +='<div class="clear"></div>';
                                   result +='</div>';

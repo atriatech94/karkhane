@@ -508,6 +508,7 @@ color: #A9A9A9;
 	font-size: 14px;
 	top: 9px;
 	right: -3px;
+    display: none;
 }
 /*--=============-- swiper  --===================--*/
 html, body, .bg_fix, .pop, test-dir, .main {

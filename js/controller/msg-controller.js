@@ -83,6 +83,7 @@ angular.module('myapp')
                 $('.contanet_profile').on("click",".refresh_msg",function(){
                     ofset = 0;
                     last_id = 0;
+                    scope.$apply(function(){ scope.datas = null;post_one = [];});
                     fetch_serche_one();
                 });
           /*====================================================*/
@@ -113,9 +114,12 @@ angular.module('myapp')
                     
                     $.post(base_url+"/api_chat/insert/Chati3-HasJ00C3B3-9854NEsIHY/"+insert_chat,ser,function(data){
                         var data = JSON.parse(data);
-                        console.log(data);
-                        $("#p-"+data.id).removeClass("already").addClass("see");
-                        $rootScope.msg.forEach(function(element, index){if(element.msg_me_id == scope.user_info[0].member_id || element.msg_you_id == scope.user_info[0].member_id){element.msg_txt = txt;element.date = data[0].date;}});
+                        date_now = moment(parseInt(data.date)).calendar();
+                        console.log(data.date);
+                        $("#p-"+data.id).removeClass("already").addClass("see-0");
+                        $("#p-"+data.id).next("span").text(date_now);
+                        if($rootScope.msg !== undefined)
+                        $rootScope.msg.forEach(function(element, index){if(element.msg_me_id == scope.user_info[0].member_id || element.msg_you_id == scope.user_info[0].member_id){element.msg_txt = txt;element.date = data.date;}});
                     });
                     
                     insert_chat++;
